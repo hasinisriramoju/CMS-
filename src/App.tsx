@@ -1,4 +1,5 @@
 import CreateCourseOptions from "./pages/CreateCourseOptions";
+import Dashboard from "./pages/Dashboard";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import Login from "./Login";
