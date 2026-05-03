@@ -1,5 +1,5 @@
 import CreateCourseOptions from "./pages/CreateCourseOptions";
-import Dashboard from "./pages/Dashboard";
+ 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import Login from "./Login";
@@ -11,7 +11,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         {/* LOGIN */}
         <Route
           path="/login"
@@ -40,11 +39,7 @@ export default function App() {
         <Route
           path="/add-course/form"
           element={
-            loggedIn ? (
-              <AddCourseForm />
-            ) : (
-              <Navigate to="/login" replace />
-            )
+            loggedIn ? <AddCourseForm /> : <Navigate to="/login" replace />
           }
         />
 
@@ -55,7 +50,6 @@ export default function App() {
             <Navigate to={loggedIn ? "/add-course" : "/login"} replace />
           }
         />
-
       </Routes>
     </BrowserRouter>
   );
